@@ -1,0 +1,5 @@
+{
+  "integration_principle": "run",
+  "predictive_build-up_rate": "skip",
+  "action-triggering_threshold": "skip"
+}
