@@ -135,56 +135,56 @@ for sub in subs:
                     new_row = pd.DataFrame({'row_index' : ep[0],
                                             'cor_index' : ep[1], 'rt' : ep[2]},
                                            index = [0])
-                    rt_bins_05 = pd.concat([rt_bins_05, new_row.loc[:]])
+                    rt_bins_05 = pd.concat([rt_bins_05, new_row.loc[:]])\
                                  .reset_index(drop = True)
 
                 if ep[1] == 32:
                     new_row = pd.DataFrame({'row_index' : ep[0],
                                             'cor_index' : ep[1], 'rt' : ep[2]},
                                            index = [0])
-                    rt_bins_05 = pd.concat([rt_bins_05, new_row.loc[:]])
+                    rt_bins_05 = pd.concat([rt_bins_05, new_row.loc[:]])\
                                  .reset_index(drop = True)
 
                 if ep[1] == 17:
                     new_row = pd.DataFrame({'row_index' : ep[0],
                                             'cor_index' : ep[1], 'rt' : ep[2]},
                                            index = [0])
-                    rt_bins_1 = pd.concat([rt_bins_1, new_row.loc[:]])
+                    rt_bins_1 = pd.concat([rt_bins_1, new_row.loc[:]])\
                                 .reset_index(drop = True)
 
                 if ep[1] == 33:
                     new_row = pd.DataFrame({'row_index' : ep[0],
                                             'cor_index' : ep[1], 'rt' : ep[2]},
                                            index = [0])
-                    rt_bins_1 = pd.concat([rt_bins_1, new_row.loc[:]])
+                    rt_bins_1 = pd.concat([rt_bins_1, new_row.loc[:]])\
                                 .reset_index(drop = True)
 
                 if ep[1] == 18:
                     new_row = pd.DataFrame({'row_index' : ep[0],
                                             'cor_index' : ep[1], 'rt' : ep[2]},
                                            index = [0])
-                    rt_bins_2 = pd.concat([rt_bins_2, new_row.loc[:]])
+                    rt_bins_2 = pd.concat([rt_bins_2, new_row.loc[:]])\
                                 .reset_index(drop = True)
 
                 if ep[1] == 34:
                     new_row = pd.DataFrame({'row_index' : ep[0],
                                             'cor_index' : ep[1], 'rt' : ep[2]},
                                            index = [0])
-                    rt_bins_2 = pd.concat([rt_bins_2, new_row.loc[:]])
+                    rt_bins_2 = pd.concat([rt_bins_2, new_row.loc[:]])\
                                 .reset_index(drop = True)
 
                 if ep[1] == 19:
                     new_row = pd.DataFrame({'row_index' : ep[0],
                                             'cor_index' : ep[1], 'rt' : ep[2]},
                                            index = [0])
-                    rt_bins_4 = pd.concat([rt_bins_4, new_row.loc[:]])
+                    rt_bins_4 = pd.concat([rt_bins_4, new_row.loc[:]])\
                                 .reset_index(drop = True)
 
                 if ep[1] == 35:
                     new_row = pd.DataFrame({'row_index' : ep[0],
                                             'cor_index' : ep[1], 'rt' : ep[2]},
                                            index = [0])
-                    rt_bins_4 = pd.concat([rt_bins_4, new_row.loc[:]])
+                    rt_bins_4 = pd.concat([rt_bins_4, new_row.loc[:]])\
                                 .reset_index(drop = True)
 
             # convert RTs into float
@@ -239,7 +239,7 @@ for sub in subs:
                 for i in range(len(rt_bins_2)):
                     if rt_bins_2.iloc[i]['RT_bins'] != b:
                         drop_epochs.append(i)
-                ep_clean_rt = ep_clean['stim_left_0.2', 'stim_right_0.2']
+                ep_clean_rt = ep_clean['stim_left_0.2', 'stim_right_0.2']\
                               .copy().drop(drop_epochs)
 
                 # create evoked for one bin and save it
@@ -254,7 +254,7 @@ for sub in subs:
                 for i in range(len(rt_bins_4)):
                     if rt_bins_4.iloc[i]['RT_bins'] != b:
                         drop_epochs.append(i)
-                ep_clean_rt = ep_clean['stim_left_0.4', 'stim_right_0.4']
+                ep_clean_rt = ep_clean['stim_left_0.4', 'stim_right_0.4']\
                               .copy().drop(drop_epochs)
 
                 # create evoked for one bin and save it
