@@ -132,10 +132,10 @@ if mode == 'resp' and sensors == 'mag':
         if sig_grand_average.data[i,idxt] < 0:
             sig_mag_neg.append(sig_grand_average.ch_names[i])
     if polarity == 'pos':
-        sig_grand_average = grand_average.copy().pick_channels(sig_mag_pos)
+        sig_grand_average = grand_average.copy().pick_channels(sig_mag_pos)\
                             .pick_types(sensors)
     if polarity == 'neg':
-        sig_grand_average = grand_average.copy().pick_channels(sig_mag_neg)
+        sig_grand_average = grand_average.copy().pick_channels(sig_mag_neg)\
                             .pick_types(sensors)
 
 # visualize in topoplot with p-values
